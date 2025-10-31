@@ -1,10 +1,11 @@
-/** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
-  output: "export", // ✅ 静态导出
-  basePath: "/dental-ai", // ✅ 仓库名
-  assetPrefix: "/dental-ai/", // ✅ 静态资源路径前缀
+  output: "export",
+  basePath: isProd ? "/dental-ai" : "",
+  assetPrefix: isProd ? "/dental-ai/" : "",
   images: {
-    unoptimized: true, // ✅ 关闭 Image 优化
+    unoptimized: true,
   },
 };
 
