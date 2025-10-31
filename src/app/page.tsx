@@ -1,4 +1,4 @@
-import VideoHero from "@/app/components/VideoHero";
+import VideoHero from "@/components/VideoHero";
 
 export default function HomePage() {
   return (
