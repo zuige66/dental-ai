@@ -1,12 +1,11 @@
-const isProd = process.env.NODE_ENV === "production";
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  basePath: isProd ? "/dental-ai" : "",
-  assetPrefix: isProd ? "/dental-ai/" : "",
+  output: 'export',
   images: {
     unoptimized: true,
   },
+  basePath: '/dental-ai',
+  assetPrefix: '/dental-ai/',
 };
 
 export default nextConfig;
