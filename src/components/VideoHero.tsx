@@ -4,14 +4,18 @@ const prefix = process.env.NODE_ENV === "production" ? "/dental-ai" : "";
 
 export default function VideoHero() {
   return (
-    <div className="relative w-full h-[60vh]  overflow-hidden flex items-center justify-center">
+    <div className="relative w-full h-[60vh] mx-auto my-12 max-w-6xl 
+        flex items-center justify-center 
+        overflow-hidden 
+        shadow-none border-0
+        rounded-2xl    // ⬅️ 新增：圆角和阴影">
       <video
         src={`${prefix}/video.mp4`}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute w-[65%] min-h-full object-cover brightness-75"
+       className="absolute w-full h-full object-cover brightness-75 rounded-2xl"
       />
       <h1
         className="
